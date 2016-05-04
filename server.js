@@ -4,7 +4,7 @@ var express = require('express');
 var mongoose = require('mongoose');
 
 // Connect to Mongodb
-mongoose.connect('mongodb://admin:admin123@ds059365.mlab.com:59365/guru99', ['products'] function(err) {
+mongoose.connect('mongodb://admin:admin123@ds059365.mlab.com:59365/guru99', ['products'], function(err) {
 	if (err) {
 		console.log('connection error', err);
 	} else {
@@ -19,6 +19,8 @@ app.use(bodyParser.json());
 
 //Routes
 app.use('/api', require('./routes/api'));
+
+// test comment
 
 // Start server
 app.listen(3000);
